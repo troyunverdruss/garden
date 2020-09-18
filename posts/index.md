@@ -1,6 +1,6 @@
 ---
 eleventyNavigation:
-  key: readme
+  key: posts
   parent: main
 ---
-# Page header
+# posts
