@@ -1,6 +1,5 @@
 ---
-eleventyNavigation:
-  key: readme
-  parent: main
+title: mainreadme
 ---
+
 # Page header

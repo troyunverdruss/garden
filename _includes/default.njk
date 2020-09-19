@@ -1,5 +1,5 @@
 ---
-title: My Rad Blog
+defaultTitle: My Rad Blog
 ---
 
 <!doctype html>
@@ -9,8 +9,13 @@ title: My Rad Blog
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
   </head>
-{{ collections.all | eleventyNavigation | eleventyNavigationToHtml | safe }}
   <body style="background-color:#202020;color:#ADADAD;"> 
+{{ collections.all | autoIndexNav(page.fileSlug) | eleventyNavigation | eleventyNavigationToHtml | safe }}
+
+{{ title }}
+
     {{ content | safe }}
+
+    
   </body>
 </html>

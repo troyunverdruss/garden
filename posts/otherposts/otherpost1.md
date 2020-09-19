@@ -1,8 +1,5 @@
 ---
-eleventyNavigation:
-  key: otherposts
-  parent: post 1
-  title: something?
+title: other post 1
 ---
 
 # Other post 1

@@ -1,6 +1,5 @@
 ---
-eleventyNavigation:
-  key: post 2
-  parent: posts
+title: post 2
 ---
+
 # post 2
