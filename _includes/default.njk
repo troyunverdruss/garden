@@ -1,5 +1,5 @@
 ---
-defaultTitle: My Rad Blog
+defaultTitle: Troy's Digital Garden
 ---
 
 <!doctype html>
@@ -9,13 +9,9 @@ defaultTitle: My Rad Blog
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>{{ title }}</title>
   </head>
-  <body style="background-color:#202020;color:#ADADAD;"> 
+  <body>
 {{ collections.all | autoIndexNav(page.fileSlug) | eleventyNavigation | eleventyNavigationToHtml | safe }}
-
 {{ title }}
-
-    {{ content | safe }}
-
-    
+{{ content | safe }}
   </body>
 </html>
