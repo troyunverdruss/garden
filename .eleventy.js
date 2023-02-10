@@ -1,6 +1,8 @@
 const eleventyNavigationPlugin = require("@11ty/eleventy-navigation");
 const path = require("path");
 
+const now = String(Date.now())
+
 var getIndex = (collection, currentSlug) => {
   let currentIndex = 0;
   collection.filter((page, index) => {
@@ -10,8 +12,17 @@ var getIndex = (collection, currentSlug) => {
 };
 
 module.exports = function(eleventyConfig) {
+  eleventyConfig.setUseGitIgnore(false)
+  eleventyConfig.addWatchTarget('./_tmp/style.css')
+  eleventyConfig.addPassthroughCopy({ './_tmp/style.css': './style.css' })
+  eleventyConfig.addShortcode('version', function () {
+    return now
+  });
+
+  // Plugins
   eleventyConfig.addPlugin(eleventyNavigationPlugin);
 
+  // Filters
   eleventyConfig.addFilter("autoIndexNav", function(collection, currentSlug) {
     const currentIndex = getIndex(collection, currentSlug);
 
